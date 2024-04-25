@@ -6,46 +6,48 @@
  */
 
 import * as React from "react"
-import { useStaticQuery, graphql } from "gatsby"
+import {graphql, useStaticQuery} from "gatsby"
+
+import {Col, Container, Row} from "react-bootstrap"
 
 import Header from "./header"
-import "./layout.css"
 
-const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
+const Layout = ({children}) => {
+    const data = useStaticQuery(graphql`
+        query SiteTitleQuery {
+            site {
+                siteMetadata {
+                    title
+                }
+            }
         }
-      }
-    }
-  `)
+    `)
 
-  return (
-    <>
-      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: `var(--size-content)`,
-          padding: `var(--size-gutter)`,
-        }}
-      >
-        <main>{children}</main>
-        <footer
-          style={{
-            marginTop: `var(--space-5)`,
-            fontSize: `var(--font-sm)`,
-          }}
-        >
-          © {new Date().getFullYear()} &middot; Built with
-          {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a>
-        </footer>
-      </div>
-    </>
-  )
+    return (
+        <>
+            <Header siteTitle={data.site.siteMetadata?.title || `Title`}/>
+            <div>
+                <main>
+                    <Container>
+                        <Row>
+                            <Col>
+                                {children}
+                            </Col>
+                        </Row>
+                    </Container>
+                </main>
+                <footer>
+                    <Container>
+                        <Row>
+                            <Col>
+                                <p>© {new Date().getFullYear()} &middot; {data.site.siteMetadata?.title || `Title`}</p>
+                            </Col>
+                        </Row>
+                    </Container>
+                </footer>
+            </div>
+        </>
+    )
 }
 
 export default Layout
