@@ -1,10 +1,3 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.com/docs/how-to/querying-data/use-static-query/
- */
-
 import * as React from "react"
 import {graphql, useStaticQuery} from "gatsby"
 
@@ -28,7 +21,7 @@ const Layout = ({children}) => {
             <Header siteTitle={data.site.siteMetadata?.title || `Title`}/>
             <div>
                 <main>
-                    <Container>
+                    <Container className={"px-0"}>
                         <Row>
                             <Col>
                                 {children}

@@ -7,8 +7,12 @@ import {Col, Container, Row} from "react-bootstrap";
 const ContactPage = () => (
     <Layout>
         <Container>
+            <Col>
+            <Row>
             <h1>Contact</h1>
             <p>How to get in touch with us, blah blah </p>
+            </Row>
+            </Col>
         </Container>
     </Layout>
 )

@@ -1,11 +1,19 @@
 import * as React from "react"
 import {Container, Nav, Navbar} from 'react-bootstrap'
 import {Link} from "gatsby"
+import {StaticImage} from "gatsby-plugin-image";
 
 const MainNav = ({siteTitle}) => (
-    <Navbar bg="light" expand="lg">
-        <Container>
-            <Navbar.Brand href="/">{siteTitle}</Navbar.Brand>
+    <Navbar className="custom-navbar" bg="light" expand="lg">
+        <Container className={"px-0"}>
+            <Navbar.Brand href="/">
+            <StaticImage 
+                src={"../images/FinnisArkLogo.jpg"} 
+                alt={siteTitle}
+                layout={"fixed"}
+                width={100}
+            />
+            </Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="me-auto">
