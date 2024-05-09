@@ -11,7 +11,8 @@ const IndexPage = () => (
             <Row>
                 <Col className={"pb-4 text-center"}>
                     <h1 className={"px-2"}>Home testy test</h1>
-                    <p>Might put this on an image, who knows?</p>
+                    <p>Might put this on an image, who knows
+                    </p>
                     <StaticImage
                         src={"../images/FinnisArkCar2.jpg"}
                         alt={"Finnis Ark Car"}
@@ -35,12 +36,10 @@ const IndexPage = () => (
                     <h2>Donations</h2>
                     <p>Details about how to donate and why donations are important.</p>
                 </Col>
-                </Row>
-                <Row>
-                <Col className={"d-flex justify-content-center"}>
-                   <div style={{ width: "80%"}}> 
-                   <FacebookFeed/>
-                   </div>
+            </Row>
+            <Row className={"justify-content-center"}>
+                <Col xs="auto">
+                    <FacebookFeed/>
                 </Col>
             </Row>
         </Container>

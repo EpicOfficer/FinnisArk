@@ -4,14 +4,14 @@ import {Link} from "gatsby"
 import {StaticImage} from "gatsby-plugin-image";
 
 const MainNav = ({siteTitle}) => (
-    <Navbar className="custom-navbar" bg="light" expand="lg">
+    <Navbar className="custom-navbar py-0" bg="light" expand="lg">
         <Container className={"px-0"}>
             <Navbar.Brand href="/">
             <StaticImage 
-                src={"../images/FinnisArkLogo.jpg"} 
+                src={"../images/FinnisArkLogoCut.png"} 
                 alt={siteTitle}
                 layout={"fixed"}
-                width={100}
+                height={85}
             />
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
