@@ -10,8 +10,6 @@ const Header = ({siteTitle}) => (
         <StaticImage
             src={"../images/FinnisArkHorses.jpg"}
             alt={"Finnis Ark Horses"}
-            width={1440}
-            height={786}
             layout={"fullWidth"}
             formats={["auto", "webp", "avif"]}
             className={"header-image"}
