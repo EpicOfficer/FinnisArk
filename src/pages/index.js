@@ -16,8 +16,6 @@ const IndexPage = () => (
                     <StaticImage
                         src={"../images/FinnisArkCar2.jpg"}
                         alt={"Finnis Ark Car"}
-                        layout={"fullWidth"}
-                        transformOptions={{fit: "cover"}}
                         quality={95}
                         formats={["auto", "webp", "avif"]}
                     />

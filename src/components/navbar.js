@@ -3,8 +3,9 @@ import {Container, Nav, Navbar} from 'react-bootstrap'
 import {Link} from "gatsby"
 import {StaticImage} from "gatsby-plugin-image";
 
+//Check about fixed top and variant dark, sticky
 const MainNav = ({siteTitle}) => (
-    <Navbar className="custom-navbar py-0" bg="light" expand="lg">
+    <Navbar className="custom-navbar py-0" bg="transparent" sticky={"top"} expand="lg">
         <Container className={"px-0"}>
             <Navbar.Brand href="/">
             <StaticImage 
