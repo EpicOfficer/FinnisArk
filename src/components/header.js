@@ -12,6 +12,7 @@ const Header = ({siteTitle}) => (
             alt={"Finnis Ark Horses"}
             layout={"fullWidth"}
             formats={["auto", "webp", "avif"]}
+            style={{position: 'absolute'}}
             className={"header-image"}
         />
         <div className="hero-content text-center">
