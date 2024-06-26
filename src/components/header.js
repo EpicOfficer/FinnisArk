@@ -17,7 +17,7 @@ const Header = ({siteTitle}) => (
         />
         <div className="hero-content text-center">
             <Container>
-                <h1>Example</h1>
+                <h1>Welcome</h1>
                 <p>More examples just to see if it works at all or if it does not</p>
                 <p><Button variant="primary">Donate</Button></p>
             </Container>

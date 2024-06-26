@@ -2,17 +2,15 @@ import * as React from "react"
 import {StaticImage} from "gatsby-plugin-image"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import {Col, Container, Row} from "react-bootstrap";
+import {Button, Col, Container, Row} from "react-bootstrap";
 import FacebookFeed from "../components/FacebookFeed";
+import SocialMediaBlock from "../components/SocialMediaBlock";
 
 const IndexPage = () => (
     <Layout>
-        <Container fluid>
+        <Container>
             <Row>
-                <Col className={"pb-4 text-center"}>
-                    <h1 className={"px-2"}>Home testy test</h1>
-                    <p>Might put this on an image, who knows
-                    </p>
+                <Col sm={6} className={"pb-4"}>
                     <StaticImage
                         src={"../images/FinnisArkCar2.jpg"}
                         alt={"Finnis Ark Car"}
@@ -20,24 +18,19 @@ const IndexPage = () => (
                         formats={["auto", "webp", "avif"]}
                     />
                 </Col>
-            </Row>
-            <Row>
-                <Col sm={4} className={"text-center"}>
-                    <h2>About Us</h2>
-                    <p>Details about how to donate and why donations are important.</p>
-                </Col>
-                <Col sm={4} className={"text-center"}>
-                    <h2>Our Cause</h2>
-                    <p>Details about how to donate and why donations are important.</p>
-                </Col>
-                <Col sm={4} className={"text-center"}>
-                    <h2>Donations</h2>
-                    <p>Details about how to donate and why donations are important.</p>
+                <Col sm={6} className={"p-5"}>
+                    <h1>Who we are?</h1>
+                    <p>Ultrices leo nisl nunc proin nunc neque turpis aliquet. Tempus velit semper et maecenas. Consectetur rhoncus facilisis amet elit maecenas molestie venenatis scelerisque. Mattis tincidunt odio id tempus sed urna. Tortor condimentum tincidunt id in ut. Lorem sit amet sit massa commodo laoreet non quis sapien. Metus commodo ultrices orci.
+                    </p>
+                    <p>Ultrices leo nisl nunc proin nunc neque turpis aliquet. Tempus velit semper et maecenas. Consectetur rhoncus facilisis amet elit maecenas molestie venenatis scelerisque. Mattis tincidunt odio id tempus sed urna. Tortor condimentum tincidunt id in ut. Lorem sit amet sit massa commodo laoreet non quis sapien. Metus commodo ultrices orci.</p>
+                    <p><Button variant="primary">Read more</Button></p>
                 </Col>
             </Row>
-            <Row className={"justify-content-center"}>
-                <Col xs="auto">
-                    <FacebookFeed/>
+        </Container>
+        <Container fluid className={"px-0"}>
+            <Row className={"bg-primary text-white"}>
+                <Col>
+                    <SocialMediaBlock/>
                 </Col>
             </Row>
         </Container>

@@ -21,7 +21,7 @@ const Layout = ({children}) => {
             <Header siteTitle={data.site.siteMetadata?.title || `Title`}/>
             <div>
                 <main>
-                    <Container className={"px-0"}>
+                    <Container fluid>
                         <Row>
                             <Col>
                                 {children}
